@@ -1,0 +1,581 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif
+}
+
+#logo{
+    left: 8rem;
+    top: 1rem;
+    
+}
+
+#logotxt{
+    padding-left: 6rem;
+    margin-top: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    /* text-transform:capitalize; */
+    color: #585858;
+      
+}
+
+
+ .ui.inverted.menu {
+    border: 0 solid transparent; 
+    background: rgb(77, 76, 76); 
+    background: #49769c;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;  
+  
+} 
+
+
+/* Pointing menu  */
+
+/* .ui.inverted.pointing.menu .active.item:after {
+    background: #49769c !important;
+} */
+
+.computer{
+    margin-top: -3rem;
+    margin-bottom: .5rem;
+}
+
+
+.item{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: .1rem;    
+}
+
+.menu{    
+    float: right; 
+}
+
+.burger{
+    float: left; 
+}
+
+
+#content {
+    min-height: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ui.grid{
+    padding: 0 !important;      
+    }
+
+.pushable.segment{
+    margin: 0 !important;
+   
+}
+
+.input{
+    top: 1rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    
+}
+
+/* circular loading icon */
+.ui.loading.loading.input>i.icon:after {
+   
+    border-color: #ff3d00 transparent transparent;
+    
+}
+
+#my_own_ip_link{
+    margin-left: 30rem;
+  
+}
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+   
+}
+
+#ip_input{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    color: rgb(87, 85, 85);
+   
+}
+
+#map { 
+    height: 80vh;  
+    margin-left: 8vw;    
+    margin-right: 8vw;    
+   
+    
+}
+
+
+/* Leaflet popup */
+.leaflet-popup-content-wrapper {
+  
+    border-radius: 1px !important;
+    font-family: 'Poppins', sans-serif;   
+    text-transform: capitalize;     
+    
+}
+
+.leaflet-popup-close-button{
+    display: none;
+}
+
+
+#strongtxt{
+    font-weight: 900;      
+   
+}
+
+#ipadd{
+    letter-spacing: 2px;
+    font-weight: 500;   
+    font-family: 'Poppins', sans-serif; 
+    font-size: .8rem;
+}
+
+#ipasn{
+    letter-spacing: 2px;
+    font-weight: 500; 
+    margin-top: -10px;
+    font-size: .8rem;
+
+}    
+
+#iporg{
+    letter-spacing: 2px;
+    font-weight: 500; 
+    margin-top: -15px;
+    font-size: .8rem;
+
+}  
+
+#more_option{
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    margin-top: -18px;
+    font-size: .9rem;
+}
+
+
+.icon{
+    font-size: 1rem !important;
+}
+
+
+
+
+/* as per dev removal is ok : https://groups.google.com/g/leaflet-js/c/fA6M7fbchOs/m/JTNVhqdc7JcJ?pli=1 */
+
+/* .leaflet-control-attribution{
+    display: none !important;
+} */
+
+
+/* Remove flag SVG  */
+svg{
+    visibility: hidden;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out{
+  display: none !important;
+}
+
+
+
+
+
+
+/* Loader CSS */
+ 
+.loader{
+    visibility: hidden;
+    position: absolute;
+    font-size: 48px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .loader:before {
+    content: "Loading";
+    color: #585858;
+  }
+  .loader:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ff3d00;
+    background-image: radial-gradient(circle 2px, #fff4 100%, transparent 0),
+      radial-gradient(circle 1px, #fff3 100%, transparent 0);
+    background-position: 14px -4px, 12px -1px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: -29px;
+    right: 87px;
+    transform-origin: center bottom;
+    animation: fillBaloon 1s ease-in-out infinite alternate;
+    font-family: 'Poppins', sans-serif;  
+  }
+
+  @keyframes fillBaloon {
+    0% { transform: scale(1)}
+    100% { transform: scale(3)}
+  } 
+  
+
+  /* Footer loader  */
+
+  
+
+.loader_ {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .loader_::after {
+    content: '';  
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-radius: 50% 50% 0;
+    border: 15px solid #ff3d00;
+    transform: rotate(45deg) translate(0, 0);
+    box-sizing: border-box;
+    animation: animMarker 0.4s ease-in-out infinite alternate;
+  }
+  .loader_::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 125%;
+    width: 54px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animShadow 0.4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes animMarker {
+    0% {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    100% {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+  
+  @keyframes animShadow {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+  /* Loader logo  */
+  
+.loader_logo {    
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .loader_logo::after {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    left: 0;
+    bottom: 0;
+    top: -22px;
+    position: absolute;
+    border-radius: 50% 50% 0;
+    border: 15px solid #ff3d00;
+    transform: rotate(45deg) translate(0, 0);
+    box-sizing: border-box;
+    animation: animMarker 0.4s ease-in-out infinite alternate;
+  }
+  .loader_logo::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 105%;
+    width: 100px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    animation: animShadow 0.4s ease-in-out infinite alternate;
+  }
+  
+  @keyframes animMarker {
+    0% {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    100% {
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+  
+  @keyframes animShadow {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+
+  /* End of Loader CSS */
+
+
+/* Sweet Alert CSS  */
+
+#swal2-title{
+    font-family: 'Poppins', sans-serif !important; 
+    letter-spacing: 1px;   
+    font-size: 2rem;
+
+}    
+
+#swal2-html-container{
+    font-family: 'Poppins', sans-serif !important; 
+    letter-spacing: 1px;  
+    font-weight: 500 !important; 
+    font-size: 1.3rem;
+
+}    
+
+.swal2-confirm{
+    background-color: rgb(62, 142, 208) !important;
+    width: 6rem;
+}
+   
+
+.swal_info_for_ip{
+    font-family: 'Poppins', sans-serif !important; 
+    letter-spacing: .3rem;
+    text-align: justify;
+    font-size: 1.3rem;
+    
+}
+
+.swal2-icon.swal2-info {
+    border-color: #f27474 !important;
+    color: #f27474 !important;
+}
+
+
+#dev_img{
+    width: 13rem;
+    
+}
+
+/* End of Sweet Alert CSS */
+
+
+::selection {
+    background-color: transparent !important;
+   
+}
+
+#div_for_dev{
+    text-align: left;
+    margin-left: 8rem;
+}
+
+/* this is for dev info */
+#jeng{
+    font-family: 'Poppins', sans-serif !important; 
+    display: inline;
+    font-weight: 500;   
+
+}
+
+#portfolio{
+    font-family: 'Poppins', sans-serif !important;     
+    font-weight: 500; 
+   
+}
+
+#addresscard, .envelope{
+    font-size: 1.8rem !important;
+}
+
+
+.item{
+    color: #363333 !important;
+    font-family: 'Poppins', sans-serif !important;     
+    font-weight: 700; 
+}
+
+#ui_message{
+    margin-top: 10rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    margin-bottom: -15rem !important;
+
+    color: #363333 !important;
+    font-family: 'Poppins', sans-serif !important;     
+    font-weight: 700; 
+    letter-spacing: .1rem;
+   
+}
+
+.bars{
+    color: white;
+}
+
+.ui.vertical.segment {
+    margin-top: -25px;
+  
+}
+
+#footertxt{
+    color: #363333 !important;
+    font-family: 'Poppins', sans-serif !important;     
+    font-weight: 700; 
+    letter-spacing: .1rem;
+    margin-bottom: -10px;
+    text-transform:capitalize;
+}
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    #logo, #logotxt{
+        display: none;
+        
+    }
+
+    .input{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #map { 
+        height: 80vh;  
+        margin-left: 0;    
+        margin-right: 0    
+            
+    }
+
+    #my_own_ip_link{
+        float: left !important;
+        margin-left: 0;
+      
+    }
+    
+    #div_for_dev{
+        text-align: left;
+        margin-left: 0;
+    }
+
+    #ui_message{
+        display: none;
+        
+     }
+
+  }
+
+
+  /* Tablets  */
+  @media (max-width:960px){
+    #logo, #logotxt{
+        display: none;
+        
+    }
+
+    .input{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #map { 
+        height: 80vh;  
+        margin-left: 0;    
+        margin-right: 0    
+            
+    }
+
+    #my_own_ip_link{
+        margin-left: 0;
+        float: left !important;
+      
+    }
+
+    #div_for_dev{
+        text-align: left;
+        margin-left: 0;
+    }
+
+    #ui_message{
+       display: none;
+       
+    }
+ 
+
+  }
+
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+
+

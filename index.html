@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="IP Lookup Tool by James - Is just another IP look up tool like other web site or apps you can see via the internet, so nothing's fancy.">
+    <meta name="keywords" content="IP Lookup,IP Information, Leaflet, Semantic UI">
+    <meta name="author" content="James Paul Espeña">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/DIST/semantic.min.css" />
+    <link rel="stylesheet" href="/CSS/override.css" />
+    <link rel="stylesheet" href="/CSS/sweetalert2.min.css" />
+    
+    <link rel="icon" type="image/x-icon" href="/IMG/IP.png">
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+
+    <link rel="stylesheet" href="/LEAFLET/leaflet.css" />
+    <script src="/LEAFLET/leaflet.js"></script>
+
+    <!-- <link rel="stylesheet" href="/CSS/leaflet.css" /> -->
+
+    <title>IP Lookup Tool by James</title>
+  </head>
+  <body>
+    <!--Logo & Text-->
+    <a href="/index.html"><span id="logo" class="loader_logo"></span></a>    
+    <div id="logotxt" class="ui tiny header">IP Lookup by James</div>    
+
+    <!--Start of Menu -->
+
+    <div class="ui grid">
+      <div class="computer only row">
+        <div class="column">
+          <div class="ui pointing menu large">
+            <a class="active item"><i class="sitemap icon"></i> IP Lookup</a>
+            <!-- <a class="item"><i class="tasks icon"></i> About</a> -->
+            <a class="item" onclick="devinfo();">
+              <i class="user secret icon"></i> Developer Info.</a>
+            <!-- <a class="item">Menu Item C</a>
+                  <a class="item">Menu Item D</a> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="tablet mobile only row">
+        <div class="column">
+          <div class="ui menu burger inverted">
+            <a id="mobile_item" class="item"><i class="bars icon"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui pushable segment">
+      <div class="ui sidebar vertical menu">
+        <a class="active item"><i class="sitemap icon"></i> IP Lookup</a>
+        <!-- <a class="item"><i class="tasks icon"></i> About</a> -->
+        <a class="item" onclick="devinfo();"
+          ><i class="user secret icon"></i> Developer Info.</a
+        >
+        <!-- <a class="item">Menu Item C</a>
+                <a class="item">Menu Item D</a> -->
+      </div>
+      <div class="pusher">
+        <div id="content" class="ui segment">
+          <!-- Start of Content here  -->
+          <div class="ui icon fluid input large" id="input_main">
+            <input
+              id="ip_input"
+              type="text"
+              placeholder=" Enter IP Address..."
+              onkeypress="return onlyNumbersWithDot(event);"
+              autocomplete="off"
+              maxlength="18"
+            />
+            <i class="circular search link icon" id="search_lnk"></i>
+          </div>
+          <br />
+          <a href="#" id="my_own_ip_link">What is my IP Address ?</a>
+        </div>
+
+        <!--Start of MAPS and CANVAS-->
+
+        <div class="ui message" id="ui_message">
+          <div class="header">
+            IP LOOK UP TOOL by James
+          </div>
+          <p>This is just another IP look up tool like other web site or apps you can see via the internet, so nothing's fancy. </p>
+        </div>
+
+        <!--Loader https://cssloaders.github.io/ -->
+        <span class="loader"></span>
+        <!--End for Search -->
+        <div id="map"></div>
+      </div>
+    </div>
+    <!--End of Menu and Mai Div-->
+
+    <div class="ui vertical footer segment">
+      <div class="ui center aligned container">   
+        <span class="loader_"></span>     
+        <!-- <img src="/IMG/IP.png" class="ui centered mini image" /> -->
+        <p id="footertxt"> Special Thanks To</p>
+        <div class="ui horizontal inverted small divided link list">       
+          <a
+            class="item"
+            href="https://cssloaders.github.io/"
+            target="_blank"
+            title="CSS Loader is a collection of different types of loaders."
+            >CSS Loaders</a>
+          <a
+            class="item"
+            href="https://leafletjs.com/"
+            target="_blank"
+            title="An open-source JavaScript library for mobile-friendly interactive maps."
+            >Leaflet JS</a
+          >
+          <a
+            class="item"
+            href="https://semantic-ui.com/"
+            target="_blank"
+            title="Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML."
+            >Semantic UI</a
+          >
+          <a
+            class="item"
+            href="https://sweetalert2.github.io/"
+            target="_blank"
+            title="A beautiful, responsive, customizable and accessible (WAI-ARIA) replacement for JavaScript's popup boxes."
+            >Sweetalert 2</a
+          >
+          <a
+            class="item"
+            href="https://ipapi.co/"
+            target="_blank"
+            title="Powerful & Simple REST API for IP Address Geolocation"
+            >IPAPI</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="/JS/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/DIST/semantic.min.js"></script>
+    <script src="/JS/leaflet.js"></script>
+    <script src="/JS/sweetalert2.min.js"></script>
+    <script src="/JS/main.js"></script>
+  </body>
+</html>
